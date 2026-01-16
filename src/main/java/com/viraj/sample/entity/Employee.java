@@ -1,12 +1,16 @@
 package com.viraj.sample.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "EMPLOYEE")
+@Getter
+@Setter
 public class Employee {
 
     @Id
@@ -25,22 +29,6 @@ public class Employee {
 
     public Employee(String employeeName, String employeeDescription) {
         this.employeeName = employeeName;
-        this.employeeDescription = employeeDescription;
-    }
-
-    public String getEmployeeName() {
-        return employeeName;
-    }
-
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
-    }
-
-    public String getEmployeeDescription() {
-        return employeeDescription;
-    }
-
-    public void setEmployeeDescription(String employeeDescription) {
         this.employeeDescription = employeeDescription;
     }
 
